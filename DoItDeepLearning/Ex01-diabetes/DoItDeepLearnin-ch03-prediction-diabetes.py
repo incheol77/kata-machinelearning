@@ -1,3 +1,4 @@
+
 import matplotlib.pyplot as plt
 from sklearn.datasets import load_diabetes
 from sklearn.datasets import load_breast_cancer
@@ -58,10 +59,11 @@ pt1_1, pt2_1 = make_point(w1, b1)
 plt.plot([pt1_1[0], pt2_1[0]], [pt1_1[1], pt2_1[1]])
 
 # traing 100 times
-pt1_1, pt2_1 = make_point(w, b)
-plt.plot([pt1[0], pt2[0]], [pt1[1], pt2[1]])
+pt1_100, pt2_100 = make_point(w, b)
+plt.plot([pt1_100[0], pt2_100[0]], [pt1_100[1], pt2_100[1]])
 
 plt.scatter(x, y)
+plt.scatter(x_new, y_pred_t0)
 plt.scatter(x_new, y_pred_t1)
 plt.scatter(x_new, y_pred_t100)
 plt.xlabel('x')
